@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #e0ece3;
+    color: #234b2e;
+}
+
+/* NAVBAR */
+nav {
+    background: #234b2e;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #a8e6b0;
+}
+
+/* HERO SECTION */
+.hero {
+    background: #234b2e;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 15px auto;
+    opacity: 0.9;
+}
+
+/* SECTION */
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* TITLE */
+.section h2 {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+/* TEAM GRID */
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.role {
+    font-size: 13px;
+    color: #4f7a5a;
+    margin-top: 5px;
+}
+
+.desc {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #234b2e;
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    background: #234b2e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="challenges.html">Challenges</a>
+    <a href="about.html">About</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>About Our Think Tank</h1>
+    <p>
+        We are a team committed to solving real-world problems through research,
+        collaboration, and innovation in agribusiness.
+    </p>
+</section>
+
+<!-- TEAM -->
+<section class="section">
+    <h2>Meet the Team</h2>
+
+    <div class="team">
+
+        <div class="card">
+            <img src="IMG-20260318-WA0005.jpg">
+            <div class="card-content">
+                <h3>MWISENEZA Clovis</h3>
+                <div class="role">Project Manager</div>
+                <div class="desc">Leads coordination, planning, and delivery across all E-Lab challenges.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="IMG-20260318-WA0006.jpg">
+            <div class="card-content">
+                <h3>UMUGWANEZA Liliane</h3>
+                <div class="role">Data Analyst</div>
+                <div class="desc">Supports research, data interpretation, and decision-making.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="IMG-20260318-WA0007.jpg">
+            <div class="card-content">
+                <h3>BAHENDA Michael</h3>
+                <div class="role">Strategy Analyst</div>
+                <div class="desc">Shapes strategy, problem framing, and solution direction.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div style="height:220px; display:flex; align-items:center; justify-content:center; background:#234b2e; color:#e0ece3; font-size:40px; font-weight:bold;">
+                OM
+            </div>
+            <div class="card-content">
+                <h3>IBEREHO Olga Maxime</h3>
+                <div class="role">UX/UI Designer</div>
+                <div class="desc">Guides user experience and design structure.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div style="height:220px; display:flex; align-items:center; justify-content:center; background:#234b2e; color:#e0ece3; font-size:40px; font-weight:bold;">
+                MC
+            </div>
+            <div class="card-content">
+                <h3>MURAGWA Christian</h3>
+                <div class="role">Graphic Designer</div>
+                <div class="desc">Handles visual storytelling and branding.</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>Bugesera Youth Agribusiness Think Tank</p>
+</footer>
+
+</body>
+</html>

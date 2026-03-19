@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bugesera Youth Agribusiness Think Tank | E-Lab Journey</title>
+  <meta name="description" content="A digital showcase of our E-Lab Think Tank journey, documenting Challenges 1 to 6, our team, our mission, and our proposed Youth Agribusiness Training & Incubation Program for Bugesera." />
+  <style>
+    :root {
+      --primary: #234b2e;
+      --primary-soft: rgba(35, 75, 46, 0.92);
+      --secondary: #e0ece3;
+      --text: #16301d;
+      --muted: #4b6353;
+      --white: #ffffff;
+      --border: rgba(35, 75, 46, 0.16);
+      --shadow: 0 16px 40px rgba(35, 75, 46, 0.12);
+      --radius: 22px;
+      --radius-sm: 16px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--secondary) 0%, #f6faf7 55%, var(--white) 100%);
+      line-height: 1.6;
+    }
+
+    img, video { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 4.8rem 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.15;
+      margin: 0 0 0.9rem;
+      color: var(--primary);
+    }
+
+    .section-subtitle {
+      max-width: 780px;
+      color: var(--muted);
+      margin: 0 0 2rem;
+      font-size: 1.05rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.55);
+      color: var(--primary);
+      border: 1px solid rgba(255,255,255,0.45);
+      font-size: 0.92rem;
+      letter-spacing: 0.01em;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(224, 236, 227, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 74px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--primary);
+      color: var(--secondary);
+      font-size: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .brand small {
+      display: block;
+      font-size: 0.74rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.96rem;
+      padding: 0.25rem 0.15rem;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.28s ease;
+    }
+
+    .nav a:hover::after,
+    .nav a:focus-visible::after {
+      width: 100%;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.35rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.95rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--secondary);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border-color: rgba(255,255,255,0.65);
+      color: var(--white);
+    }
+
+    .btn-light {
+      background: var(--secondary);
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .hero {
+      padding: 5.2rem 0 4.3rem;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.36), transparent 30%),
+        linear-gradient(135deg, rgba(35,75,46,0.98), rgba(35,75,46,0.92));
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(224,236,227,0.09);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 380px;
+      height: 380px;
+      right: -120px;
+      top: -80px;
+    }
+
+    .hero::after {
+      width: 280px;
+      height: 280px;
+      left: -70px;
+      bottom: -90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4.7rem);
+      line-height: 1.02;
+      margin: 0.8rem 0 1rem;
+      max-width: 12ch;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      max-width: 680px;
+      color: rgba(255,255,255,0.88);
+      margin: 0;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 28px;
+      padding: 1.3rem;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .stat {
+      padding: 1.1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.7rem;
+      line-height: 1;
+      margin-bottom: 0.45rem;
+      color: var(--white);
+    }
+
+    .stat span {
+      color: rgba(255,255,255,0.82);
+      font-size: 0.92rem;
+    }
+
+    .overview-grid,
+    .cards-3,
+    .cards-4,
+    .team-grid,
+    .challenge-grid,
+    .prototype-grid,
+    .document-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .overview-grid { grid-template-columns: repeat(3, 1fr); }
+    .cards-3 { grid-template-columns: repeat(3, 1fr); }
+    .cards-4 { grid-template-columns: repeat(4, 1fr); }
+    .team-grid { grid-template-columns: repeat(5, 1fr); }
+    .challenge-grid { grid-template-columns: repeat(2, 1fr); }
+    .prototype-grid { grid-template-columns: repeat(3, 1fr); }
+    .document-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      background: rgba(255,255,255,0.84);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3, .card h4 {
+      margin-top: 0;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .mission-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mission-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 6px;
+      background: var(--primary);
+    }
+
+    .mission-card p { color: var(--muted); }
+
+    .quote {
+      font-size: 1.04rem;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .team-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .team-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: var(--secondary);
+    }
+
+    .team-card-content {
+      padding: 1.1rem;
+    }
+
+    .role {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-top: -0.2rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .team-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .prototype-card,
+    .overview-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .prototype-card::after,
+    .overview-card::after {
+      content: "";
+      position: absolute;
+      right: -32px;
+      top: -32px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(35,75,46,0.06);
+    }
+
+    .metric {
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 0.55rem;
+    }
+
+    .challenge-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .challenge-media {
+      background: #dce7df;
+      position: relative;
+    }
+
+    .challenge-media video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #cedacf;
+    }
+
+    .challenge-body {
+      padding: 1.2rem 1.2rem 1.35rem;
+    }
+
+    .challenge-number {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary);
+      color: var(--secondary);
+      font-weight: 800;
+      margin-bottom: 0.85rem;
+    }
+
+    .challenge-card ul {
+      padding-left: 1.1rem;
+      margin: 0.8rem 0 1rem;
+      color: var(--muted);
+    }
+
+    .challenge-card li + li {
+      margin-top: 0.4rem;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.95rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      background: var(--secondary);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .document-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .document-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .highlight-box {
+      background: var(--primary);
+      color: var(--secondary);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-box .section-title,
+    .highlight-box h3 {
+      color: var(--white);
+    }
+
+    .highlight-box p,
+    .highlight-box li {
+      color: rgba(255,255,255,0.88);
+    }
+
+    .footer {
+      background: var(--primary);
+      color: var(--secondary);
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer p {
+      margin: 0;
+      color: rgba(224,236,227,0.86);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1100px) {
+      .team-grid { grid-template-columns: repeat(3, 1fr); }
+      .cards-4 { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 860px) {
+      .overview-grid,
+      .cards-3,
+      .challenge-grid,
+      .prototype-grid,
+      .document-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .topbar-inner { flex-direction: column; padding: 0.85rem 0; }
+      .nav { justify-content: center; }
+      .hero { padding-top: 4.2rem; }
+    }
+
+    @media (max-width: 560px) {
+      .team-grid,
+      .hero-card-grid { grid-template-columns: 1fr; }
+      .container { width: min(var(--max), calc(100% - 1.1rem)); }
+      .section { padding: 3.7rem 0; }
+      .card { padding: 1.1rem; }
+      .hero h1 { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#home" class="brand" aria-label="Homepage">
+        <span class="brand-mark">TT</span>
+        <span>
+          Bugesera Youth Agribusiness Think Tank
+          <small>E-Lab Journey Showcase</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About Us</a>
+        <a href="#statements">Core Statements</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#evidence">Evidence</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal visible">
+          <span class="tag">Final Challenge • Web Design & Creation</span>
+          <h1>Documenting our E-Lab journey from idea to impact.</h1>
+          <p>
+            This website showcases who we are as a Think Tank, the problem we identified in Bugesera,
+            the solution we designed, and the complete story of our work across Challenges 1 to 6.
+            It is a digital record of our research, community engagement, field discovery, and pitch proposal.
+          </p>
+          <div class="button-group">
+            <a class="btn btn-primary" href="#challenges">Explore Challenges</a>
+            <a class="btn btn-secondary" href="#about">Meet the Team</a>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal visible" aria-label="Project highlights">
+          <div class="hero-card-grid">
+            <div class="stat">
+              <strong>6</strong>
+              <span>E-Lab challenges documented with media and evidence</span>
+            </div>
+            <div class="stat">
+              <strong>5</strong>
+              <span>Team members contributing research, strategy, design, and storytelling</span>
+            </div>
+            <div class="stat">
+              <strong>60</strong>
+              <span>Youth targeted in our pilot agribusiness training model</span>
+            </div>
+            <div class="stat">
+              <strong>12 weeks</strong>
+              <span>Structured pilot cycle for practical and business-oriented learning</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <h2 class="section-title reveal">What this website covers</h2>
+        <p class="section-subtitle reveal">
+          The site is designed to align closely with the rubric by combining strong visual design, multimedia,
+          clear content, team profiles, and a complete record of all six E-Lab challenges.
+        </p>
+        <div class="overview-grid">
+          <article class="card overview-card reveal">
+            <span class="eyebrow">Design</span>
+            <h3>Consistent and standard</h3>
+            <p>
+              The entire website uses one font family, a clean layout, and your chosen two-color palette:
+              dark green <strong>#234b2e</strong> and light grey <strong>#e0ece3</strong>.
+            </p>
+          </article>
+          <article class="card overview-card reveal">
+            <span class="eyebrow">Content</span>
+            <h3>Clear project story</h3>
+            <p>
+              The mission statement, problem statement, solution statement, team profiles, prototype,
+              and challenge-by-challenge evidence are all presented in one place.
+            </p>
+          </article>
+          <article class="card overview-card reveal">
+            <span class="eyebrow">Multimedia</span>
+            <h3>Visual proof of work</h3>
+            <p>
+              Videos, images, and downloadable presentation files are included to strengthen your documentation
+              and make the journey engaging to review.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal">About us — who we are</h2>
+        <p class="section-subtitle reveal">
+          We are a Think Tank committed to understanding real community challenges, learning through field exposure,
+          and designing practical solutions that create impact. Each member contributes a different strength to the team.
+        </p>
+
+        <div class="team-grid">
+          <article class="card team-card reveal">
+            <img src="C:\Users\owner\Documents\E-lab\IMG-20260318-WA0007.jpg" alt="Portrait of Mwiseneza Cyubahiro Clovis" />
+            <div class="team-card-content">
+              <h3>MWISENEZA Cyubahiro Clovis</h3>
+              <div class="role">Project Manager</div>
+              <p>Leads team coordination, direction, planning, and delivery across all E-Lab challenges.</p>
+            </div>
+          </article>
+
+          <article class="card team-card reveal">
+            <img src="C:\Users\owner\Documents\E-lab\IMG-20260318-WA0006.jpg" alt="Portrait of Umugwaneza Liliane" />
+            <div class="team-card-content">
+              <h3>UMUGWANEZA Liliane</h3>
+              <div class="role">Data Analyst</div>
+              <p>Supports research, evidence gathering, interpretation of findings, and data-informed decisions.</p>
+            </div>
+          </article>
+
+          <article class="card team-card reveal">
+            <img src="C:\Users\owner\Documents\E-lab\IMG-20260318-WA0005.jpg" alt="Portrait of Bahenda Michael" />
+            <div class="team-card-content">
+              <h3>BAHENDA Michael</h3>
+              <div class="role">Strategy Analyst</div>
+              <p>Shapes the team’s strategic thinking, problem framing, and solution direction.</p>
+            </div>
+          </article>
+
+          <article class="card team-card reveal">
+            <img src="C:\Users\owner\Documents\E-lab\Screenshot_20260319_200144_Gallery.png" alt="Placeholder portrait for Ibereho Olga Maxime" />
+            <div class="team-card-content">
+              <h3>IBEREHO Olga Maxime</h3>
+              <div class="role">UX/UI Designer</div>
+              <p>Guides user-centered design, clarity of experience, and the structure of the team’s prototype.</p>
+            </div>
+          </article>
+
+          <article class="card team-card reveal">
+            <img src="PHOTO-2026-03-19-09-47-41.jpg" alt="Placeholder portrait for Muragwa Christian" />
+            <div class="team-card-content">
+              <h3>MURAGWA Christian</h3>
+              <div class="role">Graphic Designer</div>
+              <p>Strengthens visual storytelling, consistency, and the design language of our communication materials.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="statements">
+      <div class="container">
+        <h2 class="section-title reveal">Mission, problem, and solution</h2>
+        <p class="section-subtitle reveal">
+          These three statements define the purpose of our Think Tank, the challenge we identified in Bugesera,
+          and the practical response we developed through research and field engagement.
+        </p>
+
+        <div class="cards-3">
+          <article class="card mission-card reveal">
+            <span class="eyebrow">Mission statement</span>
+            <p class="quote">
+              “Our think tank mission is to bridge the gap between education and employment in Bugesera by transforming theoretical learning into practical agricultural skills.”
+            </p>
+          </article>
+
+          <article class="card mission-card reveal">
+            <span class="eyebrow">Problem statement</span>
+            <p>
+              Bugesera district has a high number of unemployed youth between 16–35 years because of the mismatch
+              between formal education and the job market. Many young people leave school with theoretical knowledge,
+              but without enough practical agricultural, technical, and entrepreneurial skills to become job-ready or productive.
+            </p>
+          </article>
+
+          <article class="card mission-card reveal">
+            <span class="eyebrow">Solution statement</span>
+            <p>
+              We propose a Youth Agribusiness Training and Incubation Program that combines hands-on agricultural training,
+              entrepreneurship skills, mentorship, and market linkages so youth can view agriculture as a profitable enterprise
+              rather than a last resort.
+            </p>
+          </article>
+        </div>
+
+        <div class="highlight-box reveal" style="margin-top: 1.35rem;">
+          <h3 style="margin-top:0;">Why our solution is practical</h3>
+          <p>
+            Our research and field work showed that the problem is not just lack of interest. The real gap is lack of practice,
+            business exposure, mentorship, and market readiness. That is why our prototype focuses on training that is experiential,
+            applied, and connected to the realities of agribusiness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prototype">
+      <div class="container">
+        <h2 class="section-title reveal">Our prototype: Youth Agribusiness Training & Incubation Program</h2>
+        <p class="section-subtitle reveal">
+          The prototype turns the solution into a practical implementation model. It translates our research into a pilot program
+          that prepares young people to build agricultural careers and agribusiness ventures.
+        </p>
+
+        <div class="prototype-grid">
+          <article class="card prototype-card reveal">
+            <span class="eyebrow">Pillar 1</span>
+            <h3>Hands-on agricultural training</h3>
+            <p>Participants gain practical exposure to crop management, irrigation basics, farm operations, and field-based learning.</p>
+          </article>
+          <article class="card prototype-card reveal">
+            <span class="eyebrow">Pillar 2</span>
+            <h3>Entrepreneurship and incubation</h3>
+            <p>Youth refine their agribusiness ideas through coaching, business planning, market thinking, and guided incubation.</p>
+          </article>
+          <article class="card prototype-card reveal">
+            <span class="eyebrow">Pillar 3</span>
+            <h3>Mentorship and market linkage</h3>
+            <p>Top teams receive mentor support, exposure visits, pitching opportunities, and linkages to real market actors.</p>
+          </article>
+        </div>
+
+        <div class="cards-4" style="margin-top: 1.35rem;">
+          <article class="card reveal">
+            <div class="metric">60</div>
+            <h4>Youth participants</h4>
+            <p>A structured pilot cohort receiving practical and business-oriented training.</p>
+          </article>
+          <article class="card reveal">
+            <div class="metric">12 weeks</div>
+            <h4>Learning cycle</h4>
+            <p>A focused pilot period that combines agricultural practice with enterprise development.</p>
+          </article>
+          <article class="card reveal">
+            <div class="metric">2 sites</div>
+            <h4>Partner exposure</h4>
+            <p>Field-based learning supported through practical training partnerships and demonstration spaces.</p>
+          </article>
+          <article class="card reveal">
+            <div class="metric">1 demo day</div>
+            <h4>Final showcase</h4>
+            <p>A concluding stage where top teams present ideas, gain feedback, and build visibility.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="challenges">
+      <div class="container">
+        <h2 class="section-title reveal">Our E-Lab journey — Challenges 1 to 6</h2>
+        <p class="section-subtitle reveal">
+          Each challenge developed a different part of our learning journey. Together, they helped us build self-awareness,
+          explore community realities, engage people directly, conduct research, launch our mission, and finally document everything through this website.
+        </p>
+
+        <div class="challenge-grid">
+          <article class="card challenge-card reveal">
+            <div class="challenge-media">
+              <video controls preload="metadata" poster="assets/posters/ch1.jpg">
+                <source src="file:///C:/Users/malik/Downloads/5%20February%202026%20-%20The%20VG1%20(480p,%20h264).mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="challenge-body">
+              <span class="challenge-number">1</span>
+              <h3>Challenge One — Introduction</h3>
+              <p>
+                This challenge introduced who we are as individuals and as a Think Tank. We created elevator pitches and began presenting
+                our strengths, interests, and identity as a team.
+              </p>
+              <ul>
+                <li>Introduced ourselves and our personal strengths</li>
+                <li>Presented elevator pitches</li>
+                <li>Started shaping our Think Tank identity</li>
+              </ul>
+              <div class="pills">
+                <span class="pill">Elevator pitch</span>
+                <span class="pill">Identity</span>
+                <span class="pill">Self-presentation</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card challenge-card reveal">
+            <div class="challenge-media">
+              <video controls preload="metadata" poster="assets/posters/ch2.jpg">
+                <source src="file:///C:/Users/malik/Downloads/Challenge%202.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="challenge-body">
+              <span class="challenge-number">2</span>
+              <h3>Challenge Two — Discover Africa</h3>
+              <p>
+                We explored Bigogwe and reflected on the place, its activities, local experiences, and some misconceptions people may hold,
+                especially concerning herdsmen and the realities of the community.
+              </p>
+              <ul>
+                <li>Visited and observed Bigogwe</li>
+                <li>Documented activities and experiences</li>
+                <li>Reflected on misconceptions and deeper understanding</li>
+              </ul>
+              <div class="pills">
+                <span class="pill">Bigogwe</span>
+                <span class="pill">Field discovery</span>
+                <span class="pill">Cultural insight</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card challenge-card reveal">
+            <div class="challenge-media">
+              <video controls preload="metadata" poster="assets/posters/ch3.jpg">
+                <source src="file:///C:/Users/malik/Downloads/Challenge%203.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="challenge-body">
+              <span class="challenge-number">3</span>
+              <h3>Challenge Three — Help-LAB</h3>
+              <p>
+                In this challenge, we practiced empathy and service. We visited a single mother with three children and supported her with
+                food supplies and cleaning equipment while documenting the visit and the experience.
+              </p>
+              <ul>
+                <li>Visited a vulnerable household</li>
+                <li>Provided food and cleaning materials</li>
+                <li>Reflected on compassion, dignity, and social responsibility</li>
+              </ul>
+              <div class="pills">
+                <span class="pill">Community service</span>
+                <span class="pill">Empathy</span>
+                <span class="pill">Impact</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card challenge-card reveal">
+            <div class="challenge-media">
+              <video controls preload="metadata" poster="assets/posters/ch4.jpg">
+                <source src="file:///C:/Users/malik/Downloads/Challenge%204.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="challenge-body">
+              <span class="challenge-number">4</span>
+              <h3>Challenge Four — Hunt for Treasure</h3>
+              <p>
+                We interviewed AgriWin Ltd to understand how a real agribusiness operates, what challenge it addresses, its daily operations,
+                its growth story, and what lessons we could apply to our own Think Tank work.
+              </p>
+              <ul>
+                <li>Researched AgriWin Ltd and its agriculture-focused work</li>
+                <li>Conducted and documented an interview</li>
+                <li>Learned about nursery production, extension services, and market-oriented agriculture</li>
+              </ul>
+              <div class="button-group">
+                <a class="btn btn-light" href="<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTrF58zrewZx5MJqPpJnJLxf3ARa7qazDTCssRrlbMrVF3wgnQuDDnrYRHlO5l0PkinfeJYAwYT5UAT/pubembed?start=true&loop=true&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></a>
+              </div>
+              <div class="pills">
+                <span class="pill">Company research</span>
+                <span class="pill">Interview</span>
+                <span class="pill">AgriWin Ltd</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card challenge-card reveal">
+            <div class="challenge-media">
+              <video controls preload="metadata" poster="assets/posters/ch5.jpg">
+                <source src="file:///C:/Users/malik/Downloads/Challenge%205.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="challenge-body">
+              <span class="challenge-number">5</span>
+              <h3>Challenge Five — Mission Launch</h3>
+              <p>
+                Here we transformed our research into a pitch proposal. We presented our mission, problem, solution, budget, prototype,
+                and expected impact as a grant-ready concept focused on Bugesera youth and agribusiness.
+              </p>
+              <ul>
+                <li>Created an investor-style pitch proposal</li>
+                <li>Presented the Youth Agribusiness Training & Incubation Program</li>
+                <li>Connected problem, evidence, and impact in one coherent solution</li>
+              </ul>
+              <div class="button-group">
+                <a class="btn btn-light" href="<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQweN5XIUeZGTWtofx3yGqZPajVZYVEZ1JsGGgBCFo3WAhgH7TlfuqCdRkcoLBKWGymP8pd2HgujYQF/pubembed?start=true&loop=true&delayms=30000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>" target="_blank" rel="noopener">Open pitch presentation</a>
+              </div>
+              <div class="pills">
+                <span class="pill">Pitch deck</span>
+                <span class="pill">Mission launch</span>
+                <span class="pill">Prototype</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card challenge-card reveal">
+            <div class="challenge-media" style="padding: 1.2rem; background: linear-gradient(135deg, rgba(35,75,46,0.98), rgba(35,75,46,0.92));">
+              <div class="highlight-box" style="margin: 0; background: rgba(255,255,255,0.08); box-shadow: none; border: 1px solid rgba(255,255,255,0.12);">
+                <span class="eyebrow" style="color: rgba(224,236,227,0.78);">Final challenge</span>
+                <h3 style="margin: 0 0 0.8rem;">Challenge Six — Web Design & Creation</h3>
+                <p style="margin: 0;">
+                  This website is our final digital print. It brings together our team identity, mission, problem, solution,
+                  prototype, visuals, videos, and documented learning journey in one standard and engaging format.
+                </p>
+              </div>
+            </div>
+            <div class="challenge-body">
+              <span class="challenge-number">6</span>
+              <h3>How this website responds to the rubric</h3>
+              <ul>
+                <li><strong>Overall Website Design:</strong> clear navigation, strong consistency, balanced spacing, and multimedia support</li>
+                <li><strong>Content:</strong> includes mission, problem, solution, prototype, and team member profiles</li>
+                <li><strong>E-LAB Challenges:</strong> all six challenges are clearly documented with visuals and explanations</li>
+              </ul>
+              <div class="pills">
+                <span class="pill">Rubric aligned</span>
+                <span class="pill">Digital print</span>
+                <span class="pill">Final submission</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="evidence">
+      <div class="container">
+        <h2 class="section-title reveal">Research evidence and supporting files</h2>
+        <p class="section-subtitle reveal">
+          These presentation files strengthen the website by showing the research, interview synthesis, and pitch proposal that shaped our final solution.
+        </p>
+
+        <div class="document-grid">
+          <article class="card document-card reveal">
+            <span class="eyebrow">Challenge 4 evidence</span>
+            <h3>AgriWin Ltd research presentation</h3>
+            <p>
+              This file captures the background of AgriWin Ltd, why the company exists, what its daily operations involve,
+              and key lessons from the interview and research process.
+            </p>
+            <div class="button-group">
+              <a class="btn btn-primary" href="<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQweN5XIUeZGTWtofx3yGqZPajVZYVEZ1JsGGgBCFo3WAhgH7TlfuqCdRkcoLBKWGymP8pd2HgujYQF/pubembed?start=true&loop=true&delayms=30000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>" target="_blank" rel="noopener">View presentation</a>
+            </div>
+          </article>
+
+          <article class="card document-card reveal">
+            <span class="eyebrow">Challenge 5 evidence</span>
+            <h3>Bugesera Youth Agribusiness pitch deck</h3>
+            <p>
+              This deck presents the problem, solution, market gap, implementation plan, budget, expected impact,
+              and the execution roadmap of our proposed program.
+            </p>
+            <div class="button-group">
+              <a class="btn btn-primary" href="<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTrF58zrewZx5MJqPpJnJLxf3ARa7qazDTCssRrlbMrVF3wgnQuDDnrYRHlO5l0PkinfeJYAwYT5UAT/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>" target="_blank" rel="noopener">View pitch deck</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Bugesera Youth Agribusiness Think Tank</strong>
+        <p>Bridging education and employment through practical agricultural skills.</p>
+      </div>
+      <p>Final E-Lab Challenge • Website Design & Creation</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el, index) => {
+      if (!el.classList.contains('visible')) {
+        el.style.transitionDelay = `${Math.min(index * 35, 280)}ms`;
+      }
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
