@@ -1,214 +1,662 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bugesera Youth Agribusiness Think Tank | E-Lab Journey</title>
+  <meta name="description" content="A digital showcase of our E-Lab Think Tank journey, documenting Challenges 1 to 6, our team, our mission, and our proposed Youth Agribusiness Training & Incubation Program for Bugesera." />
+  <style>
+    :root {
+      --primary: #234b2e;
+      --primary-soft: rgba(35, 75, 46, 0.92);
+      --secondary: #e0ece3;
+      --text: #16301d;
+      --muted: #4b6353;
+      --white: #ffffff;
+      --border: rgba(35, 75, 46, 0.16);
+      --shadow: 0 16px 40px rgba(35, 75, 46, 0.12);
+      --radius: 22px;
+      --radius-sm: 16px;
+      --max: 1180px;
+    }
 
-<title>About Us</title>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--secondary) 0%, #f6faf7 55%, var(--white) 100%);
+      line-height: 1.6;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    img, video { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
 
-<style>
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    background: #e0ece3;
-    color: #234b2e;
-}
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
 
-/* NAVBAR */
-nav {
-    background: #234b2e;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
+    .section {
+      padding: 4.8rem 0;
+    }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.15;
+      margin: 0 0 0.9rem;
+      color: var(--primary);
+    }
 
-nav a:hover {
-    color: #a8e6b0;
-}
+    .section-subtitle {
+      max-width: 780px;
+      color: var(--muted);
+      margin: 0 0 2rem;
+      font-size: 1.05rem;
+    }
 
-/* HERO SECTION */
-.hero {
-    background: #234b2e;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-}
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.55);
+      color: var(--primary);
+      border: 1px solid rgba(255,255,255,0.45);
+      font-size: 0.92rem;
+      letter-spacing: 0.01em;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+    }
 
-.hero h1 {
-    font-size: 40px;
-    font-weight: 900;
-}
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(224, 236, 227, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
 
-.hero p {
-    max-width: 600px;
-    margin: 15px auto;
-    opacity: 0.9;
-}
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 74px;
+    }
 
-/* SECTION */
-.section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 60px 20px;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
 
-/* TITLE */
-.section h2 {
-    font-size: 32px;
-    font-weight: 900;
-}
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--primary);
+      color: var(--secondary);
+      font-size: 1rem;
+      box-shadow: var(--shadow);
+    }
 
-/* TEAM GRID */
-.team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
+    .brand small {
+      display: block;
+      font-size: 0.74rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
 
-/* CARD */
-.card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
-.card:hover {
-    transform: translateY(-10px);
-}
+    .nav a {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.96rem;
+      padding: 0.25rem 0.15rem;
+      position: relative;
+    }
 
-/* IMAGE */
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.28s ease;
+    }
 
-/* CONTENT */
-.card-content {
-    padding: 20px;
-}
+    .nav a:hover::after,
+    .nav a:focus-visible::after {
+      width: 100%;
+    }
 
-.card-content h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 700;
-}
+    .button-group {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.35rem;
+    }
 
-.role {
-    font-size: 13px;
-    color: #4f7a5a;
-    margin-top: 5px;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.95rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
 
-.desc {
-    font-size: 14px;
-    margin-top: 10px;
-    color: #234b2e;
-    opacity: 0.8;
-}
+    .btn:hover { transform: translateY(-2px); }
 
-/* FOOTER */
-footer {
-    background: #234b2e;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-</style>
+    .btn-primary {
+      background: var(--primary);
+      color: var(--secondary);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border-color: rgba(255,255,255,0.65);
+      color: var(--white);
+    }
+
+    .btn-light {
+      background: var(--secondary);
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .hero {
+      padding: 5.2rem 0 4.3rem;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.36), transparent 30%),
+        linear-gradient(135deg, rgba(35,75,46,0.98), rgba(35,75,46,0.92));
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(224,236,227,0.09);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 380px;
+      height: 380px;
+      right: -120px;
+      top: -80px;
+    }
+
+    .hero::after {
+      width: 280px;
+      height: 280px;
+      left: -70px;
+      bottom: -90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4.7rem);
+      line-height: 1.02;
+      margin: 0.8rem 0 1rem;
+      max-width: 12ch;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      max-width: 680px;
+      color: rgba(255,255,255,0.88);
+      margin: 0;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 28px;
+      padding: 1.3rem;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .stat {
+      padding: 1.1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.7rem;
+      line-height: 1;
+      margin-bottom: 0.45rem;
+      color: var(--white);
+    }
+
+    .stat span {
+      color: rgba(255,255,255,0.82);
+      font-size: 0.92rem;
+    }
+
+    .overview-grid,
+    .cards-3,
+    .cards-4,
+    .team-grid,
+    .challenge-grid,
+    .prototype-grid,
+    .document-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .overview-grid { grid-template-columns: repeat(3, 1fr); }
+    .cards-3 { grid-template-columns: repeat(3, 1fr); }
+    .cards-4 { grid-template-columns: repeat(4, 1fr); }
+    .team-grid { grid-template-columns: repeat(5, 1fr); }
+    .challenge-grid { grid-template-columns: repeat(2, 1fr); }
+    .prototype-grid { grid-template-columns: repeat(3, 1fr); }
+    .document-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      background: rgba(255,255,255,0.84);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3, .card h4 {
+      margin-top: 0;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .mission-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mission-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 6px;
+      background: var(--primary);
+    }
+
+    .mission-card p { color: var(--muted); }
+
+    .quote {
+      font-size: 1.04rem;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .team-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .team-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: var(--secondary);
+    }
+
+    .team-card-content {
+      padding: 1.1rem;
+    }
+
+    .role {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-top: -0.2rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .team-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .prototype-card,
+    .overview-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .prototype-card::after,
+    .overview-card::after {
+      content: "";
+      position: absolute;
+      right: -32px;
+      top: -32px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(35,75,46,0.06);
+    }
+
+    .metric {
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 0.55rem;
+    }
+
+    .challenge-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .challenge-media {
+      background: #dce7df;
+      position: relative;
+    }
+
+    .challenge-media video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #cedacf;
+    }
+
+    .challenge-body {
+      padding: 1.2rem 1.2rem 1.35rem;
+    }
+
+    .challenge-number {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary);
+      color: var(--secondary);
+      font-weight: 800;
+      margin-bottom: 0.85rem;
+    }
+
+    .challenge-card ul {
+      padding-left: 1.1rem;
+      margin: 0.8rem 0 1rem;
+      color: var(--muted);
+    }
+
+    .challenge-card li + li {
+      margin-top: 0.4rem;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.95rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      background: var(--secondary);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .document-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .document-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .highlight-box {
+      background: var(--primary);
+      color: var(--secondary);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-box .section-title,
+    .highlight-box h3 {
+      color: var(--white);
+    }
+
+    .highlight-box p,
+    .highlight-box li {
+      color: rgba(255,255,255,0.88);
+    }
+
+    .footer {
+      background: var(--primary);
+      color: var(--secondary);
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer p {
+      margin: 0;
+      color: rgba(224,236,227,0.86);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1100px) {
+      .team-grid { grid-template-columns: repeat(3, 1fr); }
+      .cards-4 { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 860px) {
+      .overview-grid,
+      .cards-3,
+      .challenge-grid,
+      .prototype-grid,
+      .document-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .topbar-inner { flex-direction: column; padding: 0.85rem 0; }
+      .nav { justify-content: center; }
+      .hero { padding-top: 4.2rem; }
+    }
+
+    @media (max-width: 560px) {
+      .team-grid,
+      .hero-card-grid { grid-template-columns: 1fr; }
+      .container { width: min(var(--max), calc(100% - 1.1rem)); }
+      .section { padding: 3.7rem 0; }
+      .card { padding: 1.1rem; }
+      .hero h1 { max-width: 100%; }
+    }
+  </style>
 </head>
-
 <body>
-
-<!-- NAV -->
-<nav>
-    <a href="index.html">Home</a>
-    <a href="challenges.html">Challenges</a>
-    <a href="about.html">About</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <h1>About Our Think Tank</h1>
-    <p>
-        We are a team committed to solving real-world problems through research,
-        collaboration, and innovation in agribusiness.
-    </p>
-</section>
-
-<!-- TEAM -->
-<section class="section">
-    <h2>Meet the Team</h2>
-
-    <div class="team">
-
-        <div class="card">
-            <img src="IMG-20260318-WA0005.jpg">
-            <div class="card-content">
-                <h3>MWISENEZA Clovis</h3>
-                <div class="role">Project Manager</div>
-                <div class="desc">Leads coordination, planning, and delivery across all E-Lab challenges.</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="IMG-20260318-WA0006.jpg">
-            <div class="card-content">
-                <h3>UMUGWANEZA Liliane</h3>
-                <div class="role">Data Analyst</div>
-                <div class="desc">Supports research, data interpretation, and decision-making.</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="IMG-20260318-WA0007.jpg">
-            <div class="card-content">
-                <h3>BAHENDA Michael</h3>
-                <div class="role">Strategy Analyst</div>
-                <div class="desc">Shapes strategy, problem framing, and solution direction.</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div style="height:220px; display:flex; align-items:center; justify-content:center; background:#234b2e; color:#e0ece3; font-size:40px; font-weight:bold;">
-                OM
-            </div>
-            <div class="card-content">
-                <h3>IBEREHO Olga Maxime</h3>
-                <div class="role">UX/UI Designer</div>
-                <div class="desc">Guides user experience and design structure.</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div style="height:220px; display:flex; align-items:center; justify-content:center; background:#234b2e; color:#e0ece3; font-size:40px; font-weight:bold;">
-                MC
-            </div>
-            <div class="card-content">
-                <h3>MURAGWA Christian</h3>
-                <div class="role">Graphic Designer</div>
-                <div class="desc">Handles visual storytelling and branding.</div>
-            </div>
-        </div>
-
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand" aria-label="Homepage">
+        <span class="brand-mark">TT</span>
+        <span>
+          Bugesera Youth Agribusiness Think Tank
+          <small>E-Lab Journey Showcase</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="about.html">About Us</a>
+        <a href="statements.html">Core Statements</a>
+        <a href="prototype.html">Prototype</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="evidence.html">Evidence</a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<!-- FOOTER -->
-<footer>
-    <p>Bugesera Youth Agribusiness Think Tank</p>
-</footer>
+  <main id="home">
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal">About us — who we are</h2>
+        <p class="section-subtitle reveal">
+          We are a Think Tank committed to understanding real community challenges, learning through field exposure,
+          and designing practical solutions that create impact. Each member contributes a different strength to the team.
+        </p>
 
+        <div class="team-grid">
+          <article class="card team-card reveal">
+            <img src="IMG-20260318-WA0007.jpg" alt="Portrait of Mwiseneza Cyubahiro Clovis" />
+            <div class="team-card-content">
+              <h3>MWISENEZA Cyubahiro Clovis</h3>
+              <div class="role">Project Manager</div>
+              <p>Leads team coordination, direction, planning, and delivery across all E-Lab challenges.</p>
+            </div>
+          </article>
+
+          <article class="card team-card reveal">
+            <img src="IMG-20260318-WA0006.jpg" alt="Portrait of Umugwaneza Liliane" />
+            <div class="team-card-content">
+              <h3>UMUGWANEZA Liliane</h3>
+              <div class="role">Data Analyst</div>
+              <p>Supports research, evidence gathering, interpretation of findings, and data-informed decisions.</p>
+            </div>
+          </article>
+
+          <article class="card team-card reveal">
+            <img src="IMG-20260318-WA0005.jpg" alt="Portrait of Bahenda Michael" />
+            <div class="team-card-content">
+              <h3>BAHENDA Michael</h3>
+              <div class="role">Strategy Analyst</div>
+              <p>Shapes the team’s strategic thinking, problem framing, and solution direction.</p>
+            </div>
+          </article>
+
+          <article class="card team-card reveal">
+            <img src="Screenshot_20260319_200144_Gallery.png" alt="Placeholder portrait for Ibereho Olga Maxime" />
+            <div class="team-card-content">
+              <h3>IBEREHO Olga Maxime</h3>
+              <div class="role">UX/UI Designer</div>
+              <p>Guides user-centered design, clarity of experience, and the structure of the team’s prototype.</p>
+            </div>
+          </article>
+
+          <article class="card team-card reveal">
+            <img src="PHOTO-2026-03-19-09-47-41.jpg" alt="Placeholder portrait for Muragwa Christian" />
+            <div class="team-card-content">
+              <h3>MURAGWA Christian</h3>
+              <div class="role">Graphic Designer</div>
+              <p>Strengthens visual storytelling, consistency, and the design language of our communication materials.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Bugesera Youth Agribusiness Think Tank</strong>
+        <p>Bridging education and employment through practical agricultural skills.</p>
+      </div>
+      <p>Final E-Lab Challenge • Website Design & Creation</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el, index) => {
+      if (!el.classList.contains('visible')) {
+        el.style.transitionDelay = `${Math.min(index * 35, 280)}ms`;
+      }
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
